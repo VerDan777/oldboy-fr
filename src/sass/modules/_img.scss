@@ -1,0 +1,21 @@
+.img {
+    //box model
+    padding: 0 0;
+
+    //visual
+    border: none;
+    outline: none;
+
+    @include atTabletsPortrait {
+        //box model
+        display: flex;
+        width: 33.33%;
+        max-height: 500px;
+        align-content: center;
+    }
+
+    img {
+        //box model
+        height: 100%;
+    }
+}

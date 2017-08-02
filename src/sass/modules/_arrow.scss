@@ -1,0 +1,31 @@
+.arrow {
+    // positioning
+    position: relative;
+    padding: 50px 0;
+
+    &::after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform-origin: 50% 50%;
+        transform: rotate(-45deg) translateX(-50%);
+
+        // box model
+        height: 32px;
+        width: 32px;
+        // margin: 50px 0;
+
+        // visual
+        border-left: 8px solid $orange;
+        border-bottom: 8px solid $orange;
+    }
+    &--stage {
+        &::after {
+            content: "";
+            bottom: -50px;
+        }
+    }
+}

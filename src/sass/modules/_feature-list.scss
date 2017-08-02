@@ -1,0 +1,58 @@
+.feature-list {
+    // box model
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    // visual
+    list-style: none;
+
+    &__item {
+    // box model
+    margin: 32px 0;
+    padding: 0;
+    display: inline-block;
+    
+    //positioning
+    position: relative;
+
+    // typography
+    text-align: center;
+
+    @include atTabletsLandscape {
+        //box model 
+        text-align: left;
+    }
+
+    img {
+    // box model
+    height: 128px;
+    width: 128px;
+
+    @include atTabletsLandscape {
+        //box model 
+        float: left;
+        display: inline-block;
+    }
+}
+
+    mark {
+    // typography
+    font-size: 1.75rem;
+
+    @include atTabletsPortrait {
+        // typography
+        font-size: 2.75;
+    }
+}
+    }
+    &__text {
+        //box model
+        margin: 0;
+
+    @include atTabletsLandscape {
+        //box model
+        padding-left: 150px;
+        }
+    }
+}

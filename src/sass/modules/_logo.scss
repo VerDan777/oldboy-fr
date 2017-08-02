@@ -1,0 +1,16 @@
+.logo {
+    // box model
+    max-width: 100%;
+    padding: 20px;
+
+    @include atTabletsPortrait {
+        // box model
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    img {
+        // box model
+        width: 100%;
+    }
+}

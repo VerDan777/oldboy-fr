@@ -1,0 +1,181 @@
+.section {
+    // positioning
+    position: relative;
+
+    // box model
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    // visual
+    overflow: hidden;
+
+    @include atSmall {
+        //box model
+        padding: 40px 20px;
+    }
+
+    @include atTabletsPortrait {
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 60px;
+        }
+        @include atDesktop {
+        // box model
+        display: block;
+        }
+
+    &__image {
+    // positioning
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+
+    // box model
+    display: none;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    
+        // box model
+        display: block;
+  
+
+    // &--small {
+    //     // box model
+    //     display: block;
+        
+    //     // @include atTabletsLandscape {
+    //     //     //box model
+    //     //     display: none;
+    //     // }
+    // }
+
+    img {
+        // box model
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+&__fade {
+    // positioning
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    // box model
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+
+    // visual
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+    &__header {
+        // positioning
+        position: relative;
+
+        h2 {
+            // box model
+            margin-top: 0;
+            padding-left: 60px;
+
+            // typography
+            text-align: left;
+
+            @include atDesktop {
+                // typography
+                text-align: center;
+            }
+
+            &.center {
+                // box model
+                padding-left: 0;
+                
+                // typography
+                text-align: center;
+            }
+        }
+    }
+
+&__number {
+    // positioning
+    position: absolute;
+    left: -20px;
+
+    // box model
+    height: 60px;
+    width: 60px;
+
+    // typography
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+
+    // visual
+    border: 5px solid $orange;
+    border-left: none;
+
+    @include atTabletsPortrait {
+        // positioning
+        left: -60px;
+
+        // box model
+        height: 80px;
+        width: 80px;
+
+        // typography
+        font-size: 3rem;
+    }
+}
+
+&__gallery {
+
+    // box model
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    img {
+        // box model
+        width: 100%;
+        height: 100%;
+
+        @include atTabletsLandscape {
+            //box model
+            width: 100%;
+            height: 100%;
+        }
+
+        @include atDesktop {
+            //box model
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+&__gallery-img {
+    //box model 
+    height: 421px;
+    width: 274px;   
+    padding:10px 0;
+    @include atTabletsPortrait {
+        //box model
+        padding: 0 0;
+    }
+    
+    
+
+    img {
+        //box model
+        height: 100%;
+        width: 100%;
+    }
+}
+}

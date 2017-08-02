@@ -1,0 +1,114 @@
+.feature {
+    // box model
+    margin-bottom: 100px;
+    // typography
+    text-align: center;
+
+
+    @include atTabletsPortrait {
+        //box model 
+        padding: 0 35px;
+    }
+
+    @include atTabletsLandscape {
+        //box model
+        display: inline-block;
+        vertical-align: top;
+        width: 32%;
+    }
+
+    @include atDesktop {
+        // box model 
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &__image {
+        // box model
+        width: 128px;
+        margin: 0 auto;
+
+        img {
+            //box model
+            width: 100%;
+        }
+    }
+
+    &__title {
+        // box model
+        margin: 0;
+
+        // typography
+        color: $orange;
+        font-size: 2rem;
+
+        @include atTabletsLandscape {
+            //typography
+            font-size: 1.5rem;
+        }
+    }
+
+    &__text {
+        // box model
+        margin-top: 5px;
+
+        // typography
+        font-size: 1.25rem;
+
+        @include atDesktop {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__addition {
+        // positioning
+        position: relative;
+
+        // box model
+        margin-top: 100px;
+        padding: 0 10px;
+
+        // typography
+        font-size: 1.25rem;
+
+        @include atDesktop {
+            //box model
+            width: 300px;
+        }
+
+        &::before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 50%;
+            left: calc(50% - 2px);
+            top: -55px;
+
+            // box model
+            width: 3px;
+            height: 40px;
+
+            // visual
+            background-color: $orange;
+        }
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 0;
+            top: -15px;
+
+            // box model
+            display: block;
+            width: 100%;
+            height: 40px;
+
+            // visual
+            border: 3px solid $orange;
+            border-bottom: none;
+        }
+    }
+}

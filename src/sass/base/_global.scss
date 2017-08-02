@@ -1,0 +1,135 @@
+html {
+    // box model
+    box-sizing: border-box;
+    height: 100%;
+
+    // visual
+    user-select: none;
+    cursor: default;
+}
+
+*,
+*::before,
+*::after {
+    // box model
+    box-sizing: inherit;
+
+    // visual
+    user-select: inherit;
+    cursor: inherit;
+}
+
+body {
+    // typography
+    color: $white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    height: 100%;
+    width: 100%;
+
+    // visual
+    background-color: $black;
+}
+
+p {
+    @include atTabletsPortrait {
+        // typography
+        font-size: 2rem;
+    }
+  
+}
+
+mark {
+    // box model
+    padding: 0 10px;
+
+    //typography
+    font-size: 1.5rem;
+    // visual
+    background-color: $orange;
+    
+    @include atTabletsPortrait {
+        // typography
+        font-size: 2rem;
+    }
+}
+
+strong {
+    // typography
+    font-size: 2em;
+    // color: $orange;
+}
+
+small {
+    // typography
+    font-size: 0.65em;
+}
+
+sup {
+    // typography
+    font-size: 0.5em;
+}
+
+em {
+    // typography
+    color: $orange;
+    font-style: normal;
+}
+
+h1 {
+    // typography
+    font-size: 2rem;
+    text-align: center;
+
+    @include atTabletsPortrait {
+        // typography
+        font-size: 3rem;
+    }
+}
+
+h2 {
+    // typography
+    font-size: 2rem;
+    text-align: center;
+
+    @include atTabletsPortrait {
+        // typography
+        font-size: 3rem;
+    }
+    @include atDesktop {
+        // typography
+        font-size: 4rem;
+    }
+}
+
+a  {
+    // box model
+    padding: 5px 20px;
+
+    // typography
+    color: $orange;
+    text-decoration: none;
+    font-size: 2rem;
+
+    // visual
+    border: 2px solid $orange;
+    
+    @include atSmall {
+        //box model 
+        padding: 5px 5px;
+        // typography
+        font-size: 1.5rem;
+    }
+}
+.center {
+    // typography
+    text-align: center;
+}
+
+.right {
+    // typography
+    text-align: right;
+}
+
+
